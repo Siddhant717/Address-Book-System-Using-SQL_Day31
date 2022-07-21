@@ -38,3 +38,7 @@ where Firstname='Anamika'
 --UC6 Retrieve Person by City or State
 select * from Address_Book
 where City='Ajmer' or State='UP'
+
+--UC7 Size of Address Book by City and State
+select Count(City) as TotalCity from Address_Book; 
+select Count(State) as TotalState from Address_Book; 
