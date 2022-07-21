@@ -65,3 +65,10 @@ update Address_Book set Type = 'Profession' where FirstName = 'Vikas'
 update Address_Book set Type = 'Family' where FirstName = 'Shubham'
 update Address_Book set Type = 'Profession' where FirstName = 'Rishabh'
 update Address_Book set Type = 'Profession' where FirstName = 'Priya'
+
+--UC10 Get Number Of Contact Persons By Type
+select Count(*) as Profession from Address_Book where Type='Profession'
+
+select Count(*) as Family from Address_Book where Type='Family'
+
+select Count(*) as Friend from Address_Book where Type='Friend'
