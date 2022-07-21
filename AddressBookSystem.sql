@@ -30,3 +30,7 @@ update Address_Book
 set City = 'Ajmer' , State= 'Rajasthan' where FirstName ='Pranav';
 update Address_Book
 set PhoneNumber = 9807678876 where FirstName='Riya'
+
+--UC5 Delete a Person Contacts using Name
+delete from Address_Book
+where Firstname='Anamika'
