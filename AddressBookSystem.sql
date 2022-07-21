@@ -72,3 +72,8 @@ select Count(*) as Profession from Address_Book where Type='Profession'
 select Count(*) as Family from Address_Book where Type='Family'
 
 select Count(*) as Friend from Address_Book where Type='Friend'
+
+--UC11 Add Person to both Friend and Family
+insert into Address_Book values 
+('Kunal','Jain','CT colony','Bangalore','Karnataka',558866,7778889998,'Kunal@gmail.com','Friend'),
+('Saara','Khan','K colony','Bangalore','Karnataka',567466,7898882348,'Saara@gmail.com','Family')
