@@ -24,3 +24,9 @@ insert into Address_Book values
 ('Riya','Sharma','Ab colony','Lucknow','UP',677666,9998882348,'Riya@gmail.com'),
 ('Pranav','Vyas','C colony','Pune','Maharashtra',656666,9923489998,'Pranav@gmail.com'),
 ('Anamika','Singh','D colony','Chennai','Tamil Naidu',662226,8898889998,'Anamika@gmail.com')
+
+--UC4 Edit the existing data in table
+update Address_Book
+set City = 'Ajmer' , State= 'Rajasthan' where FirstName ='Pranav';
+update Address_Book
+set PhoneNumber = 9807678876 where FirstName='Riya'
