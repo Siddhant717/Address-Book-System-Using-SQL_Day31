@@ -34,3 +34,7 @@ set PhoneNumber = 9807678876 where FirstName='Riya'
 --UC5 Delete a Person Contacts using Name
 delete from Address_Book
 where Firstname='Anamika'
+
+--UC6 Retrieve Person by City or State
+select * from Address_Book
+where City='Ajmer' or State='UP'
