@@ -51,4 +51,17 @@ insert into Address_Book values
 ('Priya','Mishra','Sai colony','Pune','Maharashtra',662555,9998889988,'Priya@gmail.com')
 
 --UC8 Sort Persons Name Alphabetically for a given city
-Select* from Address_Book where City='Pune'order by FirstName asc;
+Select * from Address_Book where City='Pune'order by FirstName asc;
+
+
+--UC9 Identify Each Address Book with Name and Type
+alter table  Address_Book
+add Type varchar(25)
+
+update Address_Book set Type ='Family' where FirstName = 'Siddhant'
+update Address_Book set Type ='Friend'where FirstName = 'Riya'
+update Address_Book set Type ='Friend'  where FirstName = 'Pranav'
+update Address_Book set Type = 'Profession' where FirstName = 'Vikas'
+update Address_Book set Type = 'Family' where FirstName = 'Shubham'
+update Address_Book set Type = 'Profession' where FirstName = 'Rishabh'
+update Address_Book set Type = 'Profession' where FirstName = 'Priya'
