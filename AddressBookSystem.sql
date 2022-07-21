@@ -42,3 +42,13 @@ where City='Ajmer' or State='UP'
 --UC7 Size of Address Book by City and State
 select Count(City) as TotalCity from Address_Book; 
 select Count(State) as TotalState from Address_Book; 
+
+--Inserting some more data
+insert into Address_Book values 
+('Vikas','Mathankar','HT colony','Pune','Maharashtra',622666,8998889998,'Vikas@gmail.com'),
+('Shubham','Deshmukh','GA colony','Pune','Maharashtra',567666,7898552348,'Shubham@gmail.com'),
+('Rishabh','Patel','CM colony','Pune','Maharashtra',5756676,8723486998,'Rishabh@gmail.com'),
+('Priya','Mishra','Sai colony','Pune','Maharashtra',662555,9998889988,'Priya@gmail.com')
+
+--UC8 Sort Persons Name Alphabetically for a given city
+Select* from Address_Book where City='Pune'order by FirstName asc;
