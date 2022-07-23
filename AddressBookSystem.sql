@@ -106,3 +106,15 @@ update Address_Book set AddressBookID =2  where FirstName = 'Kunal'
 update Address_Book set AddressBookID =3  where FirstName = 'Saara'
 
 
+--UC13 
+select * from Address_Book
+where City='Ajmer' or State='UP'
+
+select Count(City) as TotalCity from Address_Book; 
+select Count(State) as TotalState from Address_Book;
+
+Select * from Address_Book where City='Pune'order by FirstName asc;
+
+select AddressBookId, COUNT (AddressBookId) from Address_Book group by AddressBookId 
+
+
