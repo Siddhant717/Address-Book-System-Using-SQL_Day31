@@ -77,3 +77,32 @@ select Count(*) as Friend from Address_Book where Type='Friend'
 insert into Address_Book values 
 ('Kunal','Jain','CT colony','Bangalore','Karnataka',558866,7778889998,'Kunal@gmail.com','Friend'),
 ('Saara','Khan','K colony','Bangalore','Karnataka',567466,7898882348,'Saara@gmail.com','Family')
+
+
+
+--UC 12 ER Diagram
+----Creating the AddressBookCategory table to differentiate Family, Friend and Profession
+create table AddressBookCategory(
+AddressBookId int primary key identity,
+Type varchar(20)
+)
+
+alter table Address_Book
+add AddressBookId int foreign key references AddressBookCategory 
+
+SELECt * FROM AddressBookCategory
+SELECT * FROM Address_Book
+--Assigning Id to Family, Friend and Profession
+Insert into AddressBookCategory values ('Family'),('Friend'),('Profession')
+
+update Address_Book set AddressBookId =1  where FirstName = 'Siddhant'
+update Address_Book set AddressBookId =1  where FirstName = 'Riya'
+update Address_Book set AddressBookId =2  where FirstName = 'Pranav'
+update Address_Book set AddressBookID =3  where FirstName = 'Vikas'
+update Address_Book set AddressBookID =3  where FirstName = 'Shubham'
+update Address_Book set AddressBookID =1  where FirstName = 'Rishabh'
+update Address_Book set AddressBookID =2  where FirstName = 'Priya'
+update Address_Book set AddressBookID =2  where FirstName = 'Kunal'
+update Address_Book set AddressBookID =3  where FirstName = 'Saara'
+
+
